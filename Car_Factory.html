@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Car Factory</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Itim|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link rel="stylesheet" href="Car_factory.css">
+
+  </head>
+  <body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<h1>Welcome to the Car Factory!</h1>
+		</div>
+		<div class="row justify-content-center">
+			<p>This car factory is a wonderful place where you can make your own car and take it for a test drive!<br /> All you have to do is enter your Model Year, Make and Color of the car you would like.</p>
+		</div>
+		<!-- user input fields -->
+		<div class="container car-inputs">
+			<div class="row justify-content-center mx-auto input car-deets">
+				<label for="Model Year">Model Year</label>
+				<input id="model" type="text" name="Model Year" value="" required>
+			</div>
+
+			<div class="row justify-content-center mx-auto input car-deets">
+				<label for="Make">Make</label>
+				<input id="brand" type="text" name="Make" value="" required>
+			</div>
+
+			<div class="row justify-content-center mx-auto input car-deets">
+				<label for="Color">Color</label>
+				<input id="paint" type="text" name="Color" value="" required>
+			</div>
+
+			<div class="container">
+				<div class="row">
+				<!-- button to create a new car based on user input -->
+					<div class="col">
+						<button onclick="makeCar()" type="button" name="button" class="action-btn">Make My Car</button>
+					</div>
+
+					<div class="col">
+						<button onclick="location.reload()" type="button" name="button" class="action-btn">Make a New Car</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- space where message of the car type or error is displayed-->
+		<div>
+			<p id="display"></p>
+		</div>
+
+		<button class="drive-btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+			Take a Test Drive!
+		</button>
+
+		<div class="collapse" id="collapseExample">
+			<div class="card card-body">
+
+				<div class="drive-btns">
+					<button onclick="goFast()" type="button" id="fast">Accelerate</button>
+					<button onclick="slow()" type="button" id="slow">Brake</button>
+				</div>
+
+				<div class="input images" style="padding-bottom: 25px">
+					<img src="http://iconhoihoi.oops.jp/sozai/icon/156-car/icon_3g_192.png" alt="green car" class="carImage">
+					<img src="car-background.png" alt="cartoon image of road" class="road-bg">
+				</div>
+
+			</div>
+		</div>
+	</div>
+      <script type="text/javascript" src="Car_Factory.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
