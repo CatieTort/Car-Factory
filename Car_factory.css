@@ -11,7 +11,7 @@ body {
   padding: 30px;
 }
 
-h1, h5 {
+h1, .drive-btn {
   font-family: 'Bungee', cursive;
   font-size: 45px;
 }
@@ -28,8 +28,15 @@ p {
 	color: #E4001B;
 	font-weight: bold;
 	font-size: 18px;
+	padding-top: 15px;
+}
+
+.details-display {
+	font-family: 'Bungee', cursive;
+	font-weight: bold;
+	font-size: 25px;
 	margin: 15px;
-	padding: 5px;
+	padding-top: 25px;
 }
 
 button, label {
@@ -38,7 +45,7 @@ button, label {
 }
 
 label {
-	padding: 15px;
+	padding: 10px;
 	width: 100%;
 	text-align: center;
 }
@@ -49,41 +56,11 @@ ul {
 	padding: 0;
 }
 
-.dropdown {
-	width: 50%;
-	transition: all .2s;
+.gimme-space {
+	margin-top: 40px;
 }
 
-.dropdown-menu{
-	width: 100%;
-}
-
-/* Style The Dropdown Button */
-.color-btn {
-	margin-top: 35px;
-	margin-left: 7px;
-	padding: 10px 5px;
-	width: 150%;
-    background-image: linear-gradient(to bottom, rgba(0,23,179), rgba(102,178,102));
-    color: white;
-    font-size: 20px;
-    border: none;
-	border-radius: 4px;
-    cursor: pointer;
-}
-
-.color-btn:hover {
-	background-image: linear-gradient(to bottom, rgba(255,69,0), rgba(255,222,25));
-	box-shadow: 0 1rem 2rem rgba(0,0,0, .15);
-}
-
-.color-btn:active,
-.color-btn:focus {
-	outline: none;
-	transform: translateY(-1.5px);
-}
-
-
+/*
 #black:hover {
 	background-color: black;
 	color: #fff;
@@ -129,7 +106,7 @@ ul {
 	color: #fff;
 	background-color: #E53E00;
 	cursor: pointer;
-}
+} */
 
 .car-inputs {
 	box-shadow: 0 1.5rem 4rem rgba(0,0,0, .2);
@@ -139,19 +116,18 @@ ul {
 	border-radius: 4px;
 }
 
-.car-deets {
-	width: 100%;
+.form__group {
+	margin: 5px;
 }
 
-.car-deets > input {
-	width: 350px;
-	height: 50px;
+.form__group > input {
+	width: 100%;
 	border: none;
 	padding: 10px;
 	border-radius: 4px;
 }
 
-.car-deets > input:focus, input:active {
+.form__group > input:focus, input:active {
 	outline: none;
 	background-color: #eff8ff;
 	border: 1px solid #B4DFFF;
@@ -185,7 +161,7 @@ ul {
 .drive-btn {
 	margin: 35px;
  	padding: 10px 5px;
- 	width: 20%;
+ 	width: 50%;
  	background-color: #5BC0BE;
  	border: none;
  	border-radius: 4px;

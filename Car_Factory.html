@@ -20,23 +20,29 @@
 		</div>
 		<!-- user input fields -->
 		<div class="container car-inputs">
-			<div class="row justify-content-center mx-auto car-deets">
-				<label for="Model Year">Model Year</label>
-				<input id="model" type="text" name="Model Year" value="" required>
-			</div>
-
-			<div class="row justify-content-center mx-auto car-deets">
-				<label for="Make">Make</label>
-				<input id="brand" type="text" name="Make" value="" required>
-			</div>
-
-			<div class="row justify-content-center mx-auto car-deets">
-				<label for="Color">Color</label>
-				<input id="paint" type="text" name="Color" value="" required>
+			<div class="row justify-content-center mx-auto">
+				<form id="form">
+					<div class="form__group">
+						<label for="Year">Year</label>
+						<input id="year" type="text" name="Year" value="" >
+					</div>
+					<div class="form__group">
+						<label for="Model">Model</label>
+						<input id="model" type="text" name="Model" value="" >
+					</div>
+					<div class="form__group">
+						<label for="Make">Make</label>
+						<input  id="brand" type="text" name="Make" value="" >
+					</div>
+					<div class="form__group">
+						<label for="Color">Color</label>
+						<input id="paint" type="text" name="Color" value="" >
+					</div>
+				</form>
 			</div>
 
 			<div class="container">
-				<div class="row justify-content-center"><p id=display-err>Error</p></div>
+				<div class="row justify-content-center" id=display-err></div>
 
 				<div class="row">
 				<!-- button to create a new car based on user input -->
@@ -50,14 +56,21 @@
 				</div>
 			</div>
 		</div>
-		<!-- space where message of the car type or error is displayed-->
-		<div>
-			<p id="display"></p>
-		</div>
 
-		<button class="drive-btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-			Take a Test Drive!
-		</button>
+
+		<div class="test-drive row gimme-space">
+			<div class="col-md-8">
+				<button class="drive-btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					Take a Test Drive!
+				</button>
+			</div>
+			<div class="col-md-4">
+				<!-- space where message of the car type is displayed-->
+				<div class="details-display" id="display">
+				</div>
+			</div>
+
+		</div>
 
 		<div class="collapse" id="collapseExample">
 			<div class="card card-body">

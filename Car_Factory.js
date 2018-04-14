@@ -1,16 +1,17 @@
 
 class CarFactory {
-	constructor(model_yr, make, color){
-		this.modelYear= model_yr,
-		this.make= make,
-		this.color= color,
+	constructor(year, model, make, color){
+		this.year = year,
+		this.model = model,
+		this.make = make,
+		this.color = color,
 		this.speed = 0
 	}
 
 	// Add a function to the object that is being returned that concatenates the make, year and color if they are entered into the input fields.
 
 	carInfo(){
-		return "Your" + " " + this.color + " " + this.modelYear + " " + this.make + " " + "is ready for a test drive";
+		return "Your" + " " + this.color + " " + this.year + " " + this.model + " " + this.make + " " + "is ready for a test drive!";
 	}
 
 	//function that returns current speed
@@ -40,20 +41,38 @@ class CarFactory {
 // all values cannot be blank
 // model yr must be a length of 4 & only numbers
 
-
 	function makeCar(){
-		function carType(){
-			var model_yr = document.getElementById("model").value;
-			var make = document.getElementById("brand").value;
-			var color = document.getElementById("paint").value;
-
-			myCar = new CarFactory(model_yr, make, color);
-		}
-
 		carType();
+	}
 
-		document.getElementById("display").innerHTML = myCar.carInfo();
+	function checkDetails(){
+		var carValues = Object.values(myCar);
+		console.log(carValues);
+		var errorMsg = ["Please enter a year",
+		"Please enter a model","Please enter a make", "Please enter a color"];
 
+		// BUG: function works for year but nothing else
+		carValues.map((index) => {
+			if(carValues[index] == ""){
+				return document.getElementById("display-err").innerHTML = errorMsg[index];
+			}else {
+				return document.getElementById("display").innerHTML = myCar.carInfo();
+			}
+		})
+		document.getElementById("form").reset();
+	}
+
+	function carType(){
+		var year = document.getElementById("year").value;
+		var model = document.getElementById("model").value;
+		var make = document.getElementById("brand").value;
+		var color = document.getElementById("paint").value;
+
+		myCar = new CarFactory(year, model, make, color);
+
+		 if(myCar !== undefined){checkDetails(myCar);}
+
+		return myCar
 	}
 
 	//loop that accelerates the car to 70
