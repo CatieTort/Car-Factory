@@ -35,6 +35,13 @@ class CarFactory {
 	}
 }
 
+// carType gets the values from the input fields and sends them to the class constructor
+// if the value of make, model or color =  " " or empty then give an error
+// all values cannot be blank
+// model yr must be a length of 4 & only numbers
+// color is selected from dropdown list
+// if no color is selected default is black
+
 	function makeCar(){
 		function carType(){
 			var model_yr = document.getElementById("model").value;
