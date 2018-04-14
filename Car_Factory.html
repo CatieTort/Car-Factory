@@ -30,28 +30,14 @@
 				<input id="brand" type="text" name="Make" value="" required>
 			</div>
 
-		<div class="row justify-content-center mx-auto car-deets">
-			<div class="col-md-6 dropdown">
-				<button class="btn color-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Select Color
-				</button>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<ul>
-						<li class="dropdown-item" id="black">Black</li>
-						<li class="dropdown-item" id="white">White</li>
-						<li class="dropdown-item" id="silver">Silver</li>
-						<li class="dropdown-item" id="red">Red</li>
-						<li class="dropdown-item" id="blue">Blue</li>
-						<li class="dropdown-item" id="green">Green</li>
-						<li class="dropdown-item" id="yellow">Yellow</li>
-						<li class="dropdown-item" id="orange">Orange</li>
-					</ul>
-				</div>
+			<div class="row justify-content-center mx-auto car-deets">
+				<label for="Color">Color</label>
+				<input id="paint" type="text" name="Color" value="" required>
 			</div>
-			<div class="col-md-3"></div>
-		</div>
 
 			<div class="container">
+				<div class="row justify-content-center"><p id=display-err>Error</p></div>
+
 				<div class="row">
 				<!-- button to create a new car based on user input -->
 					<div class="col">

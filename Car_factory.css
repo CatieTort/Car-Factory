@@ -24,6 +24,14 @@ p {
   margin: 20px;
 }
 
+#display-err {
+	color: #E4001B;
+	font-weight: bold;
+	font-size: 18px;
+	margin: 15px;
+	padding: 5px;
+}
+
 button, label {
   font-family: 'Itim', cursive;
   font-size: 20px;

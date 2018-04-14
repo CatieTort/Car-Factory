@@ -10,7 +10,7 @@ class CarFactory {
 	// Add a function to the object that is being returned that concatenates the make, year and color if they are entered into the input fields.
 
 	carInfo(){
-		return "Your" + this.modelYear + " " + this.color + " " + this.make + "is ready for a test drive";
+		return "Your" + " " + this.color + " " + this.modelYear + " " + this.make + " " + "is ready for a test drive";
 	}
 
 	//function that returns current speed
@@ -39,8 +39,7 @@ class CarFactory {
 // if the value of make, model or color =  " " or empty then give an error
 // all values cannot be blank
 // model yr must be a length of 4 & only numbers
-// color is selected from dropdown list
-// if no color is selected default is black
+
 
 	function makeCar(){
 		function carType(){
